@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav><a href="/">← {{ T "take-me-home" }}</a></nav>
+    <article class="post-content">
+        <h1>{{ .Title }}</h1>
+        <p><i>{{ .Date.Format "02.01.2006" }}</i></p>
+        <hr>
+        {{ .Content }}
+    </article>
+</body>
+</html>
