@@ -22,8 +22,8 @@ disableLanguages = []
     url = "/ru/posts/"
     weight = 1
   [[languages.ru.menu.main]]
-    name = "Правильные конспекты"
-    url = "/ru/notes-the-right-way/"
+    name = "Учеба"
+    url = "/ru/studies/"
     weight = 1
 
 [languages.en.menu]
