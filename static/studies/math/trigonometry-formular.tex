@@ -1,0 +1,121 @@
+\documentclass[]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[margin=3pt,portrait]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{multicol}
+\setlength\premulticols{1pt}
+\setlength\postmulticols{1pt}
+\setlength\multicolsep{1pt}
+\setlength\columnsep{2pt}
+
+
+%opening
+\title{Все формулы про тригонометрии. которые нужно знать}
+\author{Прокофьев Даниил}
+
+\begin{document}
+	\begin{multicols}{2}
+		
+Основные формулы:
+\begin{enumerate}
+	\item $sin^2\ \alpha + cos^2\ \alpha = 1$
+	\item $tg\ \alpha = \frac{sin\ \alpha}{cos\ \alpha}$
+	\item $ctg\ \alpha = \frac{cos\ \alpha}{sin\ \alpha}$
+	\item $tg\ \alpha \cdot ctg\ \alpha = 1$
+	\item $1 + tg^2\ \alpha = \frac{1}{cos^2\ \alpha}$
+	\item $1 + ctg^2\ \alpha = \frac{1}{sin^2\ \alpha}$
+\end{enumerate}
+
+Формулы сложения и вычитания аргументов (углов):
+\begin{enumerate}
+	\item $cos(\alpha - \beta) = cos\ \alpha \cdot cos\ \beta + sin\ \alpha \cdot sin\ \beta$
+	\item $cos(\alpha + \beta) = cos\ \alpha \cdot cos\ \beta - sin\ \alpha \cdot sin\ \beta$
+	\item $sin(\alpha + \beta) = sin\ \alpha \cdot cos\ \beta + cos\ \alpha \cdot sin\ \beta$
+	\item $sin(\alpha - \beta) = sin\ \alpha \cdot cos\ \beta - cos\ \alpha \cdot sin\ \beta$
+	\item $tg(\alpha + \beta) = \frac{tg\ \alpha + tg\ \beta}{1 - tg\ \alpha \cdot tg\ \beta}$
+	\item $tg(\alpha - \beta) = \frac{tg\ \alpha - tg\ \beta}{1 + tg\ \alpha \cdot tg\ \beta}$
+	\item $ctg(\alpha + \beta) = \frac{1 - ctg\ \alpha \cdot ctg\ \beta}{ctg\ \alpha + ctg\ \beta}$
+	\item $ctg(\alpha - \beta) = \frac{1 + ctg\ \alpha \cdot ctg\ \beta}{ctg\ \alpha - ctg\ \beta}$
+\end{enumerate}
+
+Формулы двойного угла:
+
+\begin{enumerate}
+	\item $sin (2\alpha) = 2\ sin\ \alpha\ cos\ \alpha$
+	\item $cos (2\alpha) = cos^2\ \alpha - sin^2\ \alpha = 1 - 2\ sin^2\ \alpha = 2\ cos^2\ \alpha - 1$
+	\item $tg(2\alpha) = \frac{2\ tg\ \alpha}{1 - tg^2\ \alpha}$
+\end{enumerate}
+
+Формулы тройного угла:
+\begin{enumerate}
+	\item $sin\ 3 \alpha = 3\ sin\ \alpha - 4\ sin^3\ \alpha$
+	\item $cos\ 3 \alpha = 4\ cos^3\ \alpha - 3\ cos\ \alpha$
+\end{enumerate}
+
+Формулы понижения степени:
+
+\begin{enumerate}
+	\item $cos^2\ \alpha = \frac{1 + cos\ 2\alpha}{2}$
+	\item $sin^2\ \alpha = \frac{1 - cos\ 2\alpha}{2}$
+	\item $tg^2\ \alpha = \frac{1 - cos\ 2\alpha}{1 + cos\ 2\alpha}$
+\end{enumerate}
+
+Формулы половинного угла:
+
+\begin{enumerate}
+	\item $cos^2(\frac{\alpha}{2}) = \frac{1 + cos\ \alpha}{2}$
+	\item $sin^2(\frac{\alpha}{2}) = \frac{1 - cos\ \alpha}{2}$
+	\item $tg^2(\frac{\alpha}{2}) = \frac{1 - cos\ \alpha}{1 + cos\ \alpha}$
+	\item $tg(\frac{\alpha}{2}) = \frac{sin\ \alpha}{cos\ \alpha + 1} = \frac{1 - cos\ \alpha}{sin\ \alpha}$
+	\item $ctg^2(\frac{\alpha}{2}) = \frac{1 + cos\ \alpha}{1 - cos\ \alpha}$
+	\item $ctg(\frac{\alpha}{2}) = \frac{cos\ \alpha + 1}{sin\ \alpha}$ = $\frac{sin\ \alpha}{1 - cos\ \alpha}$
+\end{enumerate}
+
+Универсальные тригонометрические подстановки:
+\begin{enumerate}
+	\item $cos\ \alpha = \frac{1 - tg^2(\frac{\alpha}{2})}{1 + tg^2(\frac{\alpha}{2})}$
+	\item $sin\ \alpha = \frac{2\ tg(\frac{\alpha}{2})}{1 + tg^2(\frac{\alpha}{2})}$
+	\item $tg\ \alpha = \frac{2\ tg(\frac{\alpha}{2})}{1 - tg^2(\frac{\alpha}{2})}$
+\end{enumerate}
+
+
+Формулы суммы и разности:
+\begin{enumerate}
+	\item $sin\ \alpha + sin\ \beta = 2\ sin(\frac{\alpha + \beta}{2})\ cos(\frac{\alpha - \beta}{2})$
+	\item $sin\ \alpha - sin\ \beta = 2\ sin(\frac{\alpha - \beta}{2})\ cos(\frac{\alpha + \beta}{2})$
+	\item $cos\ \alpha + cos\ \beta = 2\ cos(\frac{\alpha + \beta}{2})\ cos(\frac{\alpha - \beta}{2})$
+	\item $cos\ \alpha - cos\ \beta = -2\ sin(\frac{\alpha + \beta}{2})\ sin(\frac{\alpha - \beta}{2})$
+\end{enumerate}
+
+Формулы произведения:
+\begin{enumerate}
+	\item $sin\ \alpha\ cos\ \beta = \frac{1}{2}(sin(\alpha + \beta) + sin(\alpha - \beta))$
+	\item $cos\ \alpha\ cos\ \beta = \frac{1}{2}(cos(\alpha + \beta) + cos(\alpha - \beta))$
+	\item $sin\ \alpha\ sin\ \beta = \frac{1}{2}(cos(\alpha - \beta) - cos(\alpha + \beta))$
+\end{enumerate}
+
+Формулы, связанные с обратными тригонометрическими функциями:
+\begin{enumerate}
+	\item $arcsin(sin\ x) = x$, справедливо при $-\frac{\pi}{2} \leq x \leq \frac{\pi}{2}$
+	\item $sin(arcsin\ x) = x$, справедливо при $-1 \leq x \leq 1$ 
+	\item $arcsin(-x) = -arcsin\ x$
+	\item $arccos(cos\ x) = x$, справедливо при $0 \leq x \leq \pi$
+	\item $cos(arccos\ x) = x$, справедливо при $-1 \leq x \leq 1$ 
+	\item $arccos(-x) = \pi - arccos\ x$ 
+	\item $arcsin\ x + arccos\ x = \frac{\pi}{2}$
+	\item $arctg(tg\ x) = x$, справедливо при $-\frac{\pi}{2} < x < \frac{\pi}{2}$
+	\item $tg(arctg\ x) = x$, справедливо везде
+	\item $arctg(-x) = -arctg\ x$
+	\item $arcctg(ctg\ x) = x$, справедливо при $0 < x < \pi$
+	\item $ctg(arcctg x) = x$, справедливо везде
+	\item $arcctg(-x) = \pi - arcctg\ x$
+\end{enumerate}
+
+
+\end{multicols}
+
+\end{document}
