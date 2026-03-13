@@ -35,6 +35,42 @@ body {
     color: #454545;
 }
 
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+    font-family: inherit;
+}
+
+.nav-links, .nav-lang {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-separator {
+    width: 1px;
+    height: 1.2em;
+    background-color: #eee;
+    margin: 0 4px;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: #007acc;
+    transition: color 0.2s;
+}
+
+.site-nav a:hover {
+    color: #005fa3;
+    text-decoration: underline;
+}
+
+.current-lang {
+    color: #999;
+    cursor: default;
+}
+
 h1,
 h2,
 h3 {
