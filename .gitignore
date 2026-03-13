@@ -1,2 +1,6 @@
 public/
 .hugo_build.lock
+*.aux
+*.log
+*.out
+*.synctex.gz
