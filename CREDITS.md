@@ -22,3 +22,10 @@
 | `linda_leigh_working.jpg`                         | Courtesy of NEON                                       | Fair Use           |
 | `bionauts_leave_biosphere.jpg`                    | Tim Roberts / Getty Images                             | Fair Use           |
 | `tourists_inside_biosphere-2.webp`                | John Flinn                                             | Fair Use           |
+
+# Статья "Я в Matrix!"
+
+| Путь к фото (относительно `/images/matrix/`) | Источник / автор            | Лицензия / условия   |
+| -------------------------------------------- | --------------------------- | -------------------- |
+| `matrix_logo.jpg`                            | The Matrix Foundation       | CC-BY-SA 4.0         |
+| `element-interface.png`                      | Element.io (New Vector Ltd) | Fair Use / Trademark |

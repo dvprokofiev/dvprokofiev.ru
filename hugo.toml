@@ -1,7 +1,8 @@
 baseURL = 'https://dvprokofiev.ru/'
 title = 'Даниил Прокофьев'
 defaultContentLanguage = 'ru'
-defaultContentLanguageInSubdir = true
+markup.goldmark.renderer.unsafe = true
+defaultContentLanguageInSubdir = false  
 disableLanguages = []
 
 [languages]
