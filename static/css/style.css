@@ -124,3 +124,27 @@ article img, .post-content img {
         width: 100%;
     }
 }
+
+.post-figure {
+    margin: 2rem 0;
+    text-align: center; 
+}
+
+.post-figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.post-figcaption {
+    margin-top: 12px;
+}
+
+.caption-text {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #666;
+    font-style: italic;
+    line-height: 1.4;
+    display: block;
+}
