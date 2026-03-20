@@ -29,3 +29,4 @@
 | -------------------------------------------- | --------------------------- | -------------------- |
 | `matrix_logo.jpg`                            | The Matrix Foundation       | CC-BY-SA 4.0         |
 | `element-interface.png`                      | Element.io (New Vector Ltd) | Fair Use / Trademark |
+| `think_about_it.jpg`                         | Kayode Ewumi                | Fair Use             |
