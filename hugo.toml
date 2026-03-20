@@ -20,11 +20,11 @@ disableLanguages = []
 [languages.ru.menu]
   [[languages.ru.menu.main]]
     name = "Заметки"
-    url = "/ru/posts/"
+    url = "/posts/"
     weight = 1
   [[languages.ru.menu.main]]
     name = "Учеба"
-    url = "/ru/studies/"
+    url = "/studies/"
     weight = 1
 
 [languages.en.menu]
