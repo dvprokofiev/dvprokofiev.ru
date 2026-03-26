@@ -1,7 +1,6 @@
 ---
 title: "Going back to NixOS"
 date: 2026-03-25
-draft: true
 ---
 
 ![“NixOS Logo” by Simon Frankau, Tim Cuthbertson, and Daniel Baker (maintained by the NixOS Marketing Team), from nixos/branding, licensed under CC BY 4.0.](/images/nixos/nixos-logo.svg)
