@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <nav><a href="/">← {{ T "take-me-home" }}</a></nav>
+    <a href="{{ .Site.Home.RelPermalink }}">← {{ T "take-me-home" }}</a>
     <article class="post-content">
         <h1>{{ .Title }}</h1>
         <p><i>{{ .Date.Format "02.01.2006" }}</i></p>
