@@ -10,12 +10,16 @@ disableLanguages = []
     languageName = 'Русский'
     weight = 1
     contentDir = 'content/ru'
+    [languages.ru.params]
+      rss_info_url = "/posts/what_is_rss/"
 
   [languages.en]
     languageName = 'English'
     weight = 2
     contentDir = 'content/en'
     title = 'Daniil Prokofiev'
+    [languages.en.params]
+      rss_info_url = "https://aboutfeeds.com"
 
 [languages.ru.menu]
   [[languages.ru.menu.main]]
