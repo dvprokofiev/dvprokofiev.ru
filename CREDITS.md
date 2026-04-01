@@ -30,3 +30,9 @@
 | `matrix_logo.jpg`                            | The Matrix Foundation       | CC-BY-SA 4.0         |
 | `element-interface.png`                      | Element.io (New Vector Ltd) | Fair Use / Trademark |
 | `think_about_it.jpg`                         | Kayode Ewumi                | Fair Use             |
+
+# Домашняя страница
+
+| Фото                                                            | Автор/источник                                                    | Лицензия / условия использования |
+| --------------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------- |
+| Логотип Nix Webring (считается как производная от логотипа Nix) | poz(imnotpoz), автор оригинального логотипа Nix - Tim Cuthbertson | CC 4.0                           |
