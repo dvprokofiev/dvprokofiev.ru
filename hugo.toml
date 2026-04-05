@@ -40,3 +40,7 @@ disableLanguages = []
     name = "Blog"
     url = "/en/posts/"
     weight = 1
+  [[languages.en.menu.main]]
+    name = "Contacts"
+    url = "/en/contacts/"
+    weight = 1  
