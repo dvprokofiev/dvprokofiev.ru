@@ -30,6 +30,10 @@ disableLanguages = []
     name = "Учеба"
     url = "/studies/"
     weight = 1
+  [[languages.ru.menu.main]]
+    name = "Контакты"
+    url = "/contacts/"
+    weight = 1
 
 [languages.en.menu]
   [[languages.en.menu.main]]
