@@ -27,3 +27,4 @@ date: 2026-04-05
 - расширение [Mailvelope](https://mailvelope.com/en) для браузера
 - если вы в консоли на Linux: `curl https://dvprokofiev.ru/pubkey.asc | gpg --import` и затем `gpg --verify`
 - если вы на Windows, используйте Kleopatra в составе Gpg4win
+- Thunderbird автоматически предложит найти открытый ключ и проверить подлинность письма
