@@ -2,7 +2,7 @@
 
 ### или же исходный код моего веб-сайта
 
-Использует суперислы **[Hugo](https://github.com/gohugoio/hugo)**
+Использует суперсилы **[Hugo](https://github.com/gohugoio/hugo)**
 
 ## Разработка
 
