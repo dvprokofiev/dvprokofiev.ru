@@ -3,19 +3,21 @@
 
 <div class="hugo-clean-grid" style="--cols: {{ $cols }};">
   {{ range $images }}
-    {{ $src := strings.TrimPrefix "/" . }}
+    {{ $parts := split . "|" }}
+    {{ $src := strings.TrimPrefix "/" (index $parts 0) }}
+    {{ $caption := "" }}
     
-    {{/* Retrieve filename to create image caption */}}
-    {{ $filename := path.Base $src }}
-    {{ $ext := path.Ext $filename }}
-    {{ $caption := strings.TrimSuffix $ext $filename }}
-    {{/* replace '_' with spaces */}}
-    {{ $caption = replace (replace $caption "_" " ") "-" " " }}
+    {{ if ge (len $parts) 2 }}
+      {{/* change '_' to spaces */}}
+      {{ $caption = replace (index $parts 1) "_" " " }}
+    {{ end }}
 
     <div class="grid-item">
       <figure style="margin: 0; width: 100%;">
-        <img src="{{ $src | relURL }}" alt="{{ $caption }}" loading="lazy">
-        <figcaption class="gallery-caption">{{ $caption }}</figcaption>
+        <img src="{{ $src | relURL }}" alt="{{ $caption | default "Gallery image" }}" loading="lazy">
+        {{ if $caption }}
+          <figcaption class="gallery-caption">{{ $caption }}</figcaption>
+        {{ end }}
       </figure>
     </div>
   {{ end }}
@@ -33,7 +35,7 @@
   .grid-item {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: start; 
   }
 
   .grid-item figure {
@@ -51,10 +53,11 @@
 
   .gallery-caption {
     margin-top: 8px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #666;
     text-align: center;
     word-break: break-word;
+    line-height: 1.3;
   }
 
   @media (max-width: 768px) {
