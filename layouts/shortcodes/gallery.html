@@ -1,0 +1,65 @@
+{{ $images := split (.Get "src") " " }}
+{{ $cols := .Get "cols" | default "3" }}
+
+<div class="hugo-clean-grid" style="--cols: {{ $cols }};">
+  {{ range $images }}
+    {{ $src := strings.TrimPrefix "/" . }}
+    
+    {{/* Retrieve filename to create image caption */}}
+    {{ $filename := path.Base $src }}
+    {{ $ext := path.Ext $filename }}
+    {{ $caption := strings.TrimSuffix $ext $filename }}
+    {{/* replace '_' with spaces */}}
+    {{ $caption = replace (replace $caption "_" " ") "-" " " }}
+
+    <div class="grid-item">
+      <figure style="margin: 0; width: 100%;">
+        <img src="{{ $src | relURL }}" alt="{{ $caption }}" loading="lazy">
+        <figcaption class="gallery-caption">{{ $caption }}</figcaption>
+      </figure>
+    </div>
+  {{ end }}
+</div>
+
+<style>
+  .hugo-clean-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    gap: 20px;
+    width: 100%;
+    margin: 2em 0;
+  }
+
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .grid-item figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hugo-clean-grid img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }
+
+  .gallery-caption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  @media (max-width: 768px) {
+    .hugo-clean-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
