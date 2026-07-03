@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <a href="/">← Хочу домой!</a>
+    
+    <article class="post-content">
+        <h1>{{ .Title }}</h1>
+        <hr>
+        
+        {{ if .Content }}
+            <div class="stream-intro">
+                {{ .Content }}
+            </div>
+            <hr>
+        {{ end }}
+        
+        <div class="stream-feed">
+            {{ $posts := .Resources.ByType "page" }}
+            
+            {{ if $posts }}
+                {{ range sort $posts "Date" "desc" }}
+                    <article class="stream-post" style="margin-bottom: 2em;">
+                        <div class="stream-meta" style="color: gray; font-size: 0.9em;">
+                            <time>{{ .Date.Format "02.01.2006 15:04" }}</time>
+                        </div>
+                        <div class="stream-content">
+                            {{ .Content }}
+                        </div>
+                        <p class="reply-via-email" style="font-size: 0.85em; margin-top: 0.5em;">
+                            <a href="mailto:d@dvprokofiev.ru?subject=Re: Поток / Stream от / from {{ .Date.Format "02.01.2006 15:04" }}">
+                                💬 Ответить на этот пост по почте / Respond via email
+                            </a>
+                        </p>
+                    </article>
+                    <hr class="stream-divider">
+                {{ end }}
+            {{ else }}
+                <p style="color: gray;">Постов пока нет</p>
+            {{ end }}
+        </div>
+    </article>
+</body>
+</html>
