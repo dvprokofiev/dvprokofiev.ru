@@ -1,6 +1,7 @@
 ---
 title: "Мои контакты"
 date: 2026-04-05
+rss: false
 ---
 
 - **Matrix:** `@d:klaaan.ru`
