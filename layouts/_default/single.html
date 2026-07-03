@@ -13,5 +13,10 @@
         <hr>
         {{ .Content }}
     </article>
+    <p class="reply-via-email">
+        <a href="mailto:d@dvprokofiev.ru?subject=Re: {{ .Title | default ( .Date.Format "02.01.2006") }}">
+            {{i18n "leave_a_comment"}}
+        </a>
+    </p>
 </body>
 </html>
