@@ -4,7 +4,6 @@ date: 2026-04-05
 rss: false
 ---
 
-- **Matrix:** `@d:klaaan.ru`
 - **Email:** `d@dvprokofiev.ru`
 - **Сайт:** [dvprokofiev.ru](https://dvprokofiev.ru)
 
