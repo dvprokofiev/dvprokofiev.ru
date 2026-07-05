@@ -10,12 +10,7 @@ aliases: ["/m", "/matrix"]
 
 Скорее всего, **ничего**. Для удобства я настроил мост из **Telegram** в **Matrix**, и теперь все так же могу отвечать на сообщения как в Telegram, так и в Matrix. Но я буду очень рад видеть тебя на своем [Matrix сервере](https://web.klaaan.ru)!
 
-<p style="font-size: 0.9em; color: #666; display: flex; align-items: center; gap: 8px; margin-top: 2rem;">
-    <span>[matrix]</span> 
-    <a href="https://matrix.to/#/@d:klaaan.ru" style="color: #0dbd8b; font-weight: 500; text-decoration: none; border-bottom: 1px dashed #0dbd8b;">
-        напиши мне, напиши...
-    </a>
-</p>
+UPD от 05.07.2026: сегодня я поймал себя на мысли о том, что очень давно не заходил в Element. А потом нашел в почтовом ящике письмо от Cloud.ru, где мне напомнили об оплате этого сервера... и я решил не платить. Так что теперь я не пользуюсь Matrix, и сервера на klaaan.ru больше нету. Юзернейм в Matrix уже убран со страницы контактов, написан соответствующий пост в потоке.
 
 ## Что такое Matrix?
 
