@@ -1,0 +1,6 @@
+<head>
+    {{ $css := resources.Get "mos-transport/mos-transport.css" }}
+    {{ with $css }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+</head>

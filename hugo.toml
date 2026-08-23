@@ -5,6 +5,10 @@ markup.goldmark.renderer.unsafe = true
 defaultContentLanguageInSubdir = false  
 disableLanguages = []
 
+[module]
+  [[module.imports]]
+    path = "github.com/dvprokofiev/hugo-mos-transport-badges"
+
 [languages]
   [languages.ru]
     languageName = 'Русский'
