@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивная таблица Менделеева</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Таблица Менделеева</h1>
+        </header>
+        
+        <main>
+            <div class="periodic-table" id="periodic-table">
+                <!-- Главная таблица -->
+            </div>
+            <div class="f-block" id="f-block-container">
+                <!-- Лантаноиды и Актиноиды -->
+            </div>
+        </main>
+
+        <!-- Модальное окно -->
+        <div id="element-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close" id="close-modal">&times;</span>
+                <div class="modal-header">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-subtitle"></p>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="bohr-model-container">
+                        <svg id="bohr-svg" width="400" height="400" viewBox="0 0 400 400">
+                            <!-- Ядро и электроны генерируются через JS -->
+                        </svg>
+                    </div>
+                    
+                    <div class="electron-configuration">
+                        <h3>Электронные уровни</h3>
+                        <ul id="electron-list">
+                            <!-- Список электронов генерируется через JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -9,3 +9,7 @@ rss: false
 ## Математика
 
 - [Все формулы по тригонометрии](/studies/math/trigonometry-formular.pdf), [исходник в LaTeX](/studies/math/trigonometry-formular.tex)
+
+## Химия
+
+- [Таблица Менделеева](/studies/mendeleev/)

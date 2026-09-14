@@ -1,0 +1,271 @@
+:root {
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --border-color: #ccc;
+    --element-bg: #fff;
+
+    /* Category Colors */
+    --nonmetal: #a0e6ff;
+    --noble-gas: #ffc0cb;
+    --alkali-metal: #ff9999;
+    --alkaline-earth: #ffdead;
+    --metalloid: #cccc99;
+    --halogen: #ffff99;
+    --metal: #c0c0c0;
+    --transition-metal: #ffc0a0;
+    --lanthanide: #ffb6c1;
+    --actinide: #f08080;
+    --unknown: #e0e0e0;
+}
+
+/* ── Layout ── */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+    padding: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+header {
+    margin-bottom: 4px;
+    flex-shrink: 0;
+}
+
+header h1 {
+    margin: 4px 0;
+    font-size: 1.3rem;
+}
+
+main {
+    width: 100%;
+    max-width: 900px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+}
+
+/* ── Main Grid ── */
+
+.periodic-table {
+    display: grid;
+    grid-template-columns: 22px repeat(7, minmax(0, 1fr)) repeat(3, minmax(0, 1fr));
+    grid-template-rows: 20px repeat(11, minmax(0, 1fr));
+    gap: 2px;
+    width: 100%;
+    aspect-ratio: 14 / 10;
+}
+
+/* ── f-block (Lanthanides / Actinides) ── */
+
+.f-block {
+    display: grid;
+    grid-template-columns: repeat(14, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+    margin-top: 6px;
+    width: 100%;
+    aspect-ratio: 14 / 1.8;
+}
+
+/* ── Grid Headers ── */
+
+.grid-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.period-header {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+}
+
+/* ── Element Cell ── */
+
+.element {
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--element-bg);
+    transition: transform 0.1s, box-shadow 0.1s;
+    font-size: 0.7rem;
+    padding: 1px 2px;
+    overflow: hidden;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: baseline;
+    line-height: 1;
+}
+
+.subgroup-a  { align-items: flex-start; }
+.subgroup-b  { align-items: flex-end; }
+.subgroup-viii { align-items: center; }
+
+.element:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.element .number { font-size: 0.65rem; }
+.element .mass   { font-size: 0.6rem; color: #444; }
+
+.element .symbol {
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.1;
+}
+
+.element .name {
+    font-size: 0.55rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    align-self: center;
+    line-height: 1.1;
+}
+
+/* ── Modal ── */
+
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden { display: none !important; }
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.close {
+    position: absolute;
+    top: 12px; right: 16px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+}
+.close:hover { color: #333; }
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bohr-model-container {
+    flex: 1 1 280px;
+    display: flex;
+    justify-content: center;
+}
+
+.electron-configuration {
+    flex: 0 0 180px;
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+#electron-list {
+    list-style-type: none;
+    padding: 0; margin: 0;
+}
+
+#electron-list li {
+    padding: 4px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+#electron-list li:last-child { border-bottom: none; }
+
+/* ── Bohr model animation ── */
+
+@keyframes rotateShell {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.electron-shell {
+    transform-origin: 200px 200px;
+}
+
+/* ── Tablet / small screens ── */
+
+@media (max-height: 700px), (max-width: 820px) {
+    #app {
+        height: auto;
+        min-height: 100dvh;
+        overflow: auto;
+    }
+
+    .periodic-table {
+        grid-template-rows: 18px repeat(11, 32px);
+        flex: none;
+    }
+
+    .f-block {
+        grid-template-rows: repeat(2, 32px);
+        flex: none;
+    }
+
+    .element .symbol { font-size: 0.8rem; }
+    .element .number { font-size: 0.5rem; }
+    .element .mass   { font-size: 0.45rem; }
+    .element .name   { font-size: 0.4rem; }
+}
