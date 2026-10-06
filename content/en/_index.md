@@ -11,4 +11,4 @@ In general, I spend my time doing **two** things:
 - programming and fiddling with computers, trying to create something interesting
 - trying to explore where the line between usefulness and harm of technology
 
-Now I'm focused on making [seating generator](https://github.com/dvprokofiev/seating-generator) (repository description is in Russian) -- website, which can help teachers make seating plans for their students quickly and conveniently, taking into account each and every student’s preferences.
+Now I'm focused on making [arrangio](https://github.com/arrangio) -- high-performance spatial optimization engine
