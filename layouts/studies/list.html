@@ -11,20 +11,31 @@
         {{ .Content }}
     </main>
 
-    {{/* iterate through subsections */}}
-    {{ range .Sections }}
-        <section class="study-section">
-            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-            <ul>
-                {{/* iterate through blogposts of each subsection */}}
-                {{ range .RegularPages }}
-                    <li>
-                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                        <time>{{ .Date.Format "02.01.2006" }}</time>
-                    </li>
-                {{ end }}
-            </ul>
-        </section>
+    {{/* we're on /studies */}}
+    {{ if .Sections }}
+        {{ range .Sections }}
+            <section class="study-section">
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                <ul>
+                    {{ range .RegularPages }}
+                        <li>
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            <time>{{ .Date.Format "02.01.2006" }}</time>
+                        </li>
+                    {{ end }}
+                </ul>
+            </section>
+        {{ end }}
+    {{ else }}
+        {{/* we're in a subsection, for example /studies/math */}}
+        <ul>
+            {{ range .RegularPages }}
+                <li>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <time>{{ .Date.Format "02.01.2006" }}</time>
+                </li>
+            {{ end }}
+        </ul>
     {{ end }}
 
     <hr>
