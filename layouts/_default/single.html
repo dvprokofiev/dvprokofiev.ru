@@ -14,11 +14,31 @@
             <hr>
             {{ .Content }}
         </article>
-        <p class="reply-via-email">
-            <a href="mailto:d@dvprokofiev.ru?subject=Re: {{ .Title | default ( .Date.Format "02.01.2006") }}">
-                {{i18n "leave_a_comment"}}
-            </a>
-        </p>
+        <section class="feedback-section">
+            <h3>Задать вопрос или оставить отзыв</h3>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" class="feedback-form">
+                <input type="hidden" name="access_key" value="574e2f4c-97de-4b46-933b-535e4cd2e121">
+                <input type="hidden" name="subject" value="Вопрос по статье: {{ .Title }}">
+                <input type="hidden" name="from_name" value="dvprokofiev.ru">
+                <input type="hidden" name="article_url" value="{{ .Permalink }}">
+                <input type="checkbox" name="botcheck" style="display: none;">
+
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Как к вам обращаться?" required>
+                    <input type="email" name="email" placeholder="Ваш email для ответа">
+                </div>
+                
+                <textarea name="message" rows="4" placeholder="Что бы вы хотели сказать?" required></textarea>
+                
+                <div class="form-footer">
+                    <button type="submit">Отправить вопрос</button>
+                    <span class="feedback-alt">
+                        или напрямую на <a href="mailto:d@dvprokofiev.ru?subject=Re: {{ .Title | default (.Date.Format "02.01.2006") }}">d@dvprokofiev.ru</a>
+                    </span>
+                </div>
+            </form>
+        </section>
     </body>
     </html>
 {{ end }}

@@ -44,3 +44,9 @@
 | Сайт [aboutfeeds.com](https://aboutfeeds.com)                  | Matt Webb                                                          | CC-BY-SN 3.0                    |
 | Значок RSS (`/static/images/what-is-rss/rss-icon-mozilla.png`) | Mozilla Foundation                                                 | MPL, GPL и LGPL                 |
 | Скриншот FreshRSS                                              | [GitHub репозиторий проекта](https://github.com/FreshRSS/FreshRSS) | Как и репозиторий, GNU AGPLv3   |
+
+# Статья "Задания 19-21 (одна куча)"
+
+| Материал                      | Автор/источник                                                       | Лицензия/ условия использования |
+| ----------------------------- | -------------------------------------------------------------------- | ------------------------------- |
+| Картинка британского каирнова | Предположительно, [RAM](https://commons.wikimedia.org/wiki/User:RAM) | Общественное достояние          |

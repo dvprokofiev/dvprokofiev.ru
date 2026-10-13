@@ -1,7 +1,86 @@
 @font-face {
-    font-family: 'Bi';
+    font-family: 'Bitter';
     src: url('Bitter-VariableFont_wght.ttf');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
 }
+
+body {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 16px;
+    font: 18px/1.65 -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif;
+    color: #2f343b;
+    background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Bitter', Georgia, serif;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #1a1e24;
+}
+
+h1 {
+    font-size: 2.1rem;
+    margin: 1.5rem 0 0.8rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 2.2rem 0 0.8rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid #eaecef;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin: 1.8rem 0 0.6rem;
+}
+
+h4 {
+    font-size: 1.05rem;
+    margin: 1.3rem 0 0.4rem;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+a {
+    color: #007acc;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+a:hover {
+    color: #005fa3;
+    text-decoration: underline;
+}
+
+body > a:first-child {
+    display: inline-block;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+}
+
+.reply-via-email {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #6a737d;
+}
+
 .avatar {
     width: 70px;
     height: 70px;
@@ -15,25 +94,6 @@
 .avatar:hover {
     filter: grayscale(0%);
 }
-body {
-    max-width: 650px;
-    margin: 40px auto;
-    padding: 0 10px;
-    font:
-        18px/1.5 -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        "Helvetica Neue",
-        Arial,
-        "Noto Sans",
-        sans-serif,
-        "Apple Color Emoji",
-        "Segoe UI Emoji",
-        "Segoe UI Symbol",
-        "Noto Color Emoji";
-    color: #454545;
-}
 
 .site-nav {
     display: flex;
@@ -43,7 +103,8 @@ body {
     font-family: inherit;
 }
 
-.nav-links, .nav-lang {
+.nav-links,
+.nav-lang {
     display: flex;
     gap: 12px;
 }
@@ -55,79 +116,162 @@ body {
     margin: 0 4px;
 }
 
-.site-nav a {
-    text-decoration: none;
-    color: #007acc;
-    transition: color 0.2s;
-}
-
-.site-nav a:hover {
-    color: #005fa3;
-    text-decoration: underline;
-}
-
 .current-lang {
     color: #999;
     cursor: default;
 }
 
-h1,
-h2,
-h3 {
-    font-family: Bitter;
-    font-weight: 400;
-    line-height: 1.1;
+ul,
+ol {
+    padding-left: 1.6rem;
+    margin: 1rem 0;
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        color: #c9d1d9;
-        background: #0d1117;
-    }
-
-    a:link {
-        color: #58a6ff;
-    }
-
-    a:visited {
-        color: #8e96f0;
-    }
+li {
+    margin-bottom: 0.4rem;
 }
+
+li > ul,
+li > ol {
+    margin: 0.3rem 0;
+}
+
+blockquote {
+    margin: 1.4rem 0;
+    padding: 0.85rem 1.2rem;
+    border-left: 4px solid #007acc;
+    background-color: #f6f9fc;
+    border-radius: 0 8px 8px 0;
+    color: #333a42;
+}
+
+blockquote > :first-child {
+    margin-top: 0;
+}
+
+blockquote > :last-child {
+    margin-bottom: 0;
+}
+
 code {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.88em;
+    padding: 0.18em 0.38em;
+    background-color: #f1f3f5;
+    border-radius: 4px;
+    color: #24292f;
+}
+
+pre {
+    margin: 1.4rem 0;
+    padding: 1rem 1.25rem;
+    background-color: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
     white-space: pre-wrap;
-    font-size: 15px;
+    word-break: break-word;
 }
 
-article img, .post-content img {
-    max-height: 500px;
-    max-width: 650px;
-    height: auto;
-    border-radius: 8px; 
+.highlight {
+    margin: 1.4rem 0;
+}
+
+.highlight pre {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
     display: block;
-    margin: 1.5rem auto; 
-    width: auto; 
+    overflow-x: auto;
 }
 
-@media (max-width: 480px) {
-    body {
-        margin: 20px auto;
-        font-size: 16px;
-    }
+th,
+td {
+    border: 1px solid #d0d7de;
+    padding: 8px 12px;
+    text-align: left;
+}
 
-    .avatar {
-        width: 60px;
-        height: 60px;
-    }
+th {
+    background-color: #f6f8fa;
+    font-weight: 600;
+}
 
-    article img, .post-content img {
-        max-height: none;
-        width: 100%;
-    }
+tr:nth-child(even) td {
+    background-color: #fafbfc;
+}
+
+details {
+    margin: 1.25rem 0;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    background-color: #ffffff;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+
+details summary {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0.7rem 1rem;
+    color: #007acc;
+    user-select: none;
+    background-color: #f8fafc;
+    transition: background-color 0.15s ease;
+}
+
+details summary:hover {
+    background-color: #eef3f8;
+}
+
+details[open] {
+    border-color: #b9c3ce;
+    background-color: #ffffff;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #e1e4e8;
+    margin-bottom: 0.8rem;
+}
+
+details > :not(summary) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+details > *:last-child {
+    margin-bottom: 0.8rem;
+}
+
+article img,
+.post-content img {
+    max-height: 500px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 1.5rem auto;
+    width: auto;
 }
 
 .post-figure {
     margin: 2rem 0;
-    text-align: center; 
+    text-align: center;
 }
 
 .post-figure img {
@@ -147,4 +291,283 @@ article img, .post-content img {
     font-style: italic;
     line-height: 1.4;
     display: block;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #eaecef;
+    margin: 2rem 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 20px auto;
+        font-size: 16px;
+        padding: 0 12px;
+    }
+
+    .avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    article img,
+    .post-content img {
+        max-height: none;
+        width: 100%;
+    }
+
+    pre {
+        padding: 0.8rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.feedback-section {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eaecef;
+}
+
+.feedback-section h3 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+}
+
+.feedback-hint {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+    color: #6a737d;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row input {
+    flex: 1;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    font-family: inherit;
+    font-size: 15px;
+    padding: 10px 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    background-color: #fcfcfd;
+    color: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.feedback-form input[type="text"]:focus,
+.feedback-form input[type="email"]:focus,
+.feedback-form textarea:focus {
+    outline: none;
+    border-color: #007acc;
+    background-color: #ffffff;
+}
+
+.feedback-form textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.feedback-form button {
+    background-color: #007acc;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.feedback-form button:hover {
+    background-color: #005fa3;
+}
+
+.feedback-alt {
+    font-size: 0.88rem;
+    color: #6a737d;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #c9d1d9;
+        background-color: #0d1117;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: #e6edf3;
+    }
+
+    h2 {
+        border-bottom-color: #21262d;
+    }
+
+    a {
+        color: #58a6ff;
+    }
+
+    a:hover {
+        color: #79b8ff;
+    }
+
+    a:visited {
+        color: #8e96f0;
+    }
+
+    .site-nav a {
+        color: #58a6ff;
+    }
+
+    .site-nav a:hover {
+        color: #79b8ff;
+    }
+
+    .nav-separator {
+        background-color: #30363d;
+    }
+
+    body > a:first-child {
+        color: #58a6ff;
+    }
+
+    blockquote {
+        background-color: #161b22;
+        border-left-color: #58a6ff;
+        color: #c9d1d9;
+    }
+
+    code {
+        background-color: #21262d;
+        color: #e6edf3;
+    }
+
+    pre {
+        background-color: #161b22;
+        border-color: #30363d;
+    }
+
+    table th,
+    table td {
+        border-color: #30363d;
+    }
+
+    table th {
+        background-color: #161b22;
+    }
+
+    table tr:nth-child(even) td {
+        background-color: #12161d;
+    }
+
+    details {
+        border-color: #30363d;
+        background-color: #0d1117;
+    }
+
+    details summary {
+        color: #58a6ff;
+        background-color: #161b22;
+    }
+
+    details summary:hover {
+        background-color: #1f242c;
+    }
+
+    details[open] {
+        border-color: #484f58;
+        background-color: #0d1117;
+    }
+
+    details[open] summary {
+        border-bottom-color: #30363d;
+    }
+
+    hr {
+        background-color: #21262d;
+    }
+
+    .avatar {
+        border-color: #30363d;
+    }
+
+    .caption-text {
+        color: #8b949e;
+    }
+
+    .reply-via-email {
+        color: #8b949e;
+    }
+
+    .feedback-section {
+        border-top-color: #21262d;
+    }
+
+    .feedback-hint,
+    .feedback-alt {
+        color: #8b949e;
+    }
+
+    .feedback-form input[type="text"],
+    .feedback-form input[type="email"],
+    .feedback-form textarea {
+        background-color: #161b22;
+        border-color: #30363d;
+        color: #e6edf3;
+    }
+
+    .feedback-form input[type="text"]:focus,
+    .feedback-form input[type="email"]:focus,
+    .feedback-form textarea:focus {
+        border-color: #58a6ff;
+        background-color: #0d1117;
+    }
+
+    .feedback-form button {
+        background-color: #238636;
+    }
+
+    .feedback-form button:hover {
+        background-color: #2ea043;
+    }
 }
